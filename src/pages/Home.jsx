@@ -15,7 +15,32 @@ export default function Home() {
     <>
       <HeroSection />
 
-      {/* About Teaser */}
+      {/* Products */}
+      <section className="py-28 bg-stone-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-14 gap-6">
+            <SectionHeader
+              badge="Our Finishes"
+              title={<>Premium Laminated<br />Marine Plywood</>}
+              subtitle="Choose from four premium laminate finishes, all on marine-grade hardwood core."
+              center={false}
+            />
+            <Link
+              to="/products"
+              className="group shrink-0 inline-flex items-center gap-2 px-5 py-2.5 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              View All <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.map((product, i) => (
+              <ProductCard key={product.id} product={product} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+ {/* About Teaser */}
       <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -72,31 +97,6 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products */}
-      <section className="py-28 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-14 gap-6">
-            <SectionHeader
-              badge="Our Finishes"
-              title={<>Premium Laminated<br />Marine Plywood</>}
-              subtitle="Choose from four premium laminate finishes, all on marine-grade hardwood core."
-              center={false}
-            />
-            <Link
-              to="/products"
-              className="group shrink-0 inline-flex items-center gap-2 px-5 py-2.5 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
-            >
-              View All <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((product, i) => (
-              <ProductCard key={product.id} product={product} index={i} />
-            ))}
           </div>
         </div>
       </section>

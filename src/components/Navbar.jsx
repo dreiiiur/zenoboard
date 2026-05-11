@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
-import { RiLeafLine } from 'react-icons/ri'
 
 const navLinks = [
   { path: '/', label: 'Home' },
@@ -34,9 +33,10 @@ export default function Navbar() {
     ? 'bg-transparent'
     : 'bg-white border-b border-stone-100'
 
-  const logoColor = scrolled || !isHome ? <img src="/logo.png" alt="ZenoBoard Logo" className="w-32" /> : <img src="/logo-negative.png" alt="ZenoBoard Logo" className="w-32" />
-  const linkColor = scrolled || !isHome ? 'text-stone-700 hover:text-primary' : 'text-white hover:text-primary'
-  const activeColor = scrolled || !isHome ? 'text-primary' : 'text-white'
+  // Always dark on home (bright hero), always dark on other pages
+  const linkColor = 'text-stone-700 hover:text-primary'
+  const activeColor = 'text-primary'
+
   return (
     <>
       <motion.nav
@@ -49,9 +49,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
-              <div>
-                {logoColor}
-              </div>
+              <img src="/logo.png" alt="ZenoBoard Logo" className="w-32" />
             </Link>
 
             {/* Desktop Nav */}
@@ -90,7 +88,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors ${scrolled || !isHome ? 'text-primary hover:bg-stone-100' : 'text-white hover:bg-white/10'}`}
+              className="lg:hidden p-2 rounded-lg text-primary hover:bg-stone-100 transition-colors"
               aria-label="Toggle menu"
             >
               {menuOpen ? <HiX className="text-2xl" /> : <HiMenuAlt3 className="text-2xl" />}
