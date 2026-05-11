@@ -187,7 +187,7 @@ export const products = [
       'https://images.unsplash.com/photo-1617104578519-b4317da21b59?w=800&q=80',
       'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
     ],
-    color: '#3D2314',
+    color: '#808080',
     applications: ['Executive Offices', 'Hotel Lobbies', 'Premium Residences', 'Commercial Furniture'],
     tags: ['Exotic', 'Bold', 'Luxury'],
   },
