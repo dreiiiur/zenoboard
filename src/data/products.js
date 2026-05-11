@@ -28,7 +28,7 @@ export const products = [
       surface: 'Double-sided laminate',
     },
     images: [
-      '/Walnut.png',
+      '/products/Walnut.png',
       'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
       'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
       'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
@@ -66,7 +66,7 @@ export const products = [
       surface: 'Double-sided laminate',
     },
     images: [
-      '/Straight oak.png',
+      '/products/Straight oak.png',
       'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80',
       'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
       'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80',
@@ -104,7 +104,7 @@ export const products = [
       surface: 'Double-sided laminate',
     },
     images: [
-      '/Wenge.png',
+      '/products/Wenge.png',
       'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80',
       'https://images.unsplash.com/photo-1617104578519-b4317da21b59?w=800&q=80',
       'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
@@ -142,7 +142,7 @@ export const products = [
       surface: 'Double-sided laminate',
     },
     images: [
-      '/White.png',
+      '/products/white/White.png',
       '/products/white/white side.jpg',
       'https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?w=800&q=80',
       'https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&q=80',
@@ -150,6 +150,46 @@ export const products = [
     color: '#F5F0EB',
     applications: ['Modern Kitchens', 'Minimalist Bedrooms', 'Scandinavian Interiors', 'Retail Fixtures'],
     tags: ['Modern', 'Clean', 'Versatile'],
+  },
+  {
+    id: 'gray',
+    name: 'Gray',
+    category: 'Laminated Marine Plywood',
+    finish: 'Gray',
+    tagline: 'Sleek, contemporary look',
+    shortDescription: 'A sophisticated gray finish that adds a modern touch to any space. Perfect for creating a calm, cohesive atmosphere.',
+    fullDescription:
+      'The Gray finish offers a sleek, contemporary aesthetic that complements a wide range of interior design styles. Its neutral tone provides a versatile backdrop that can be easily paired with other colors and textures to create a harmonious environment.',
+    fullDescription:
+      'The Wenge finish replicates the distinctive look of African wenge hardwood — one of the most sought-after exotic woods in premium furniture design. Dark chocolate tones with lighter grain streaks create a visually striking surface that commands attention in any interior setting.',
+    price: 'Contact for pricing',
+    rating: 4.9,
+    reviewCount: 35,
+    dimensions: {
+      width: '4 ft (1220 mm)',
+      length: '8 ft (2440 mm)',
+    },
+    thicknesses: ['18mm'],
+    selectedThickness: '18mm',
+    specs: {
+      width: '1220 mm (4 ft)',
+      length: '2440 mm (8 ft)',
+      thickness: '18mm',
+      core: 'Marine Grade Hardwood',
+      finish: 'High-Pressure Laminate (HPL)',
+      glueStandard: 'WBP (Weather & Boil Proof)',
+      grade: 'Triple A',
+      surface: 'Double-sided laminate',
+    },
+    images: [
+      '/products/Gray.png',
+      'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80',
+      'https://images.unsplash.com/photo-1617104578519-b4317da21b59?w=800&q=80',
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
+    ],
+    color: '#3D2314',
+    applications: ['Executive Offices', 'Hotel Lobbies', 'Premium Residences', 'Commercial Furniture'],
+    tags: ['Exotic', 'Bold', 'Luxury'],
   },
 ];
 
