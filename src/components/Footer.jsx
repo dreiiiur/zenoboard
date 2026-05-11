@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { RiLeafLine } from 'react-icons/ri'
+import { FaTiktok } from "react-icons/fa";
 import { FiFacebook, FiInstagram, FiYoutube, FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
 
 const navLinks = [
@@ -25,28 +26,23 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
-                <RiLeafLine className="text-white text-lg" />
-              </div>
               <div>
-                <span className="text-lg font-bold tracking-tight text-white">Zenoboard</span>
-                <span className="block text-[10px] tracking-[0.15em] uppercase text-white/40">Philippines</span>
+                <img src="/logo-negative.png" alt="ZenoBoard Logo" className="w-32" />
               </div>
             </Link>
             <p className="text-stone-400 text-sm leading-relaxed mb-6">
               Premium laminated marine plywood for residential and commercial projects. Grade Triple A quality, manufacturer direct.
             </p>
             <div className="flex items-center gap-3">
-              {[FiFacebook, FiInstagram, FiYoutube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-lg bg-white/5 hover:bg-primary transition-colors duration-200 flex items-center justify-center group"
-                  aria-label="Social link"
-                >
-                  <Icon className="text-stone-400 group-hover:text-white text-sm transition-colors" />
-                </a>
-              ))}
+              <a href="https://www.facebook.com/profile.php?id=61576497621623" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-white text-lg transition-colors">
+                <FiFacebook />
+              </a>
+              <a href="https://www.instagram.com/zenoboardphilippines/" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-white text-lg transition-colors">
+                <FiInstagram />
+              </a>
+              <a href="https://www.tiktok.com/@zenoboardph?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-white text-lg transition-colors">
+                <FaTiktok />
+              </a>
             </div>
           </div>
 
