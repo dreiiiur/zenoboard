@@ -1,136 +1,217 @@
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FiArrowRight, FiPlay } from 'react-icons/fi'
 
+const slides = [
+  {
+    src: '/logo-negative.png',
+    alt: 'Premium interior',
+    headline: <>The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">#1 Manufacturer</span><br />in the Philippines.</>,
+    sub: 'Zenoboard Philippines manufactures premium laminated marine plywood for residential and commercial projects.',
+  },
+  {
+    src: '/hero-image-2.png',
+    alt: 'Marine plywood application',
+    headline: <>Built for<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Every Project.</span></>,
+    sub: 'From kitchen cabinets to commercial fit-outs — Zenoboard delivers Grade AAA quality every time.',
+  },
+  {
+    src: '/hero-image-3.png',
+    alt: 'Residential project',
+    headline: <>Direct from<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Factory to Site.</span></>,
+    sub: 'Skip the middleman. Get premium laminated marine plywood straight from our Bulacan manufacturing plant.',
+  },
+]
+
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   show: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] },
   }),
 }
 
-export default function HeroSection() {
+// Dot grid pattern
+function DotGrid({ className }) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/hero-image.png"
-          alt="Premium interior"
-          className="w-full h-full object-cover opacity-70"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent" />
-      </div>
+    <div className={`grid gap-2 ${className}`} style={{ gridTemplateColumns: 'repeat(8, 1fr)' }}>
+      {Array.from({ length: 48 }).map((_, i) => (
+        <div key={i} className="w-1 h-1 rounded-full bg-primary/20" />
+      ))}
+    </div>
+  )
+}
 
-      {/* Decorative grain */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        backgroundSize: '200px',
-      }} />
+export default function HeroSection() {
+  const [current, setCurrent] = useState(0)
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 align-middle text-center">
-        <div className="max-w-3xl">
-          {/* Badge */}
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const slide = slides[current]
+
+  return (
+    <section className="relative min-h-screen flex flex-col bg-white overflow-hidden">
+
+    
+      {/* Main hero area */}
+      <div className="flex-1 flex flex-col lg:flex-row">
+
+        {/* LEFT — Content */}
+        <div className="relative flex flex-col justify-center px-8 sm:px-12 lg:px-16 xl:px-24 pt-28 lg:pt-16 pb-16 lg:w-1/2 z-10">
+
+          {/* Dot grid decoration */}
+          <DotGrid className="absolute top-24 left-6 opacity-60 hidden lg:grid" />
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+            >
+              {/* Badge */}
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                custom={0}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-7"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                <span className="text-primary text-xs font-semibold tracking-widest uppercase">
+                  Premium Laminated Marine Plywood
+                </span>
+              </motion.div>
+
+              {/* Headline */}
+              <motion.h1
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                custom={1}
+                className="text-4xl sm:text-5xl xl:text-6xl font-bold text-stone-800 leading-[1.08] tracking-tight mb-5"
+              >
+                {slide.headline}
+              </motion.h1>
+
+              {/* Subtext */}
+              <motion.p
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                custom={2}
+                className="text-stone-500 text-base lg:text-lg leading-relaxed mb-8 max-w-md"
+              >
+                {slide.sub}
+              </motion.p>
+
+              {/* CTAs */}
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                custom={3}
+                className="flex flex-wrap gap-3 mb-14"
+              >
+                <Link
+                  to="/products"
+                  className="group inline-flex items-center gap-2.5 px-7 py-3.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+                >
+                  Explore Products
+                  <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-primary-dark font-semibold rounded-full border-2 border-stone-200 hover:border-primary/40 hover:bg-stone-50 transition-all duration-300"
+                >
+                  <FiPlay className="text-sm text-primary" />
+                  Get a Quote
+                </Link>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Stats row */}
           <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/5 backdrop-blur-sm border border-black/10 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            <span className="text-black/60 text-xs font-medium tracking-widest uppercase">
-              Zenoboard Philippines - Premium Laminated Marine Plywood
-            </span>
+            {[
+              { value: '15+', label: 'Years Experience' },
+              { value: 'AAA', label: 'Quality Grade' },
+              { value: '500+', label: 'Projects Done' },
+              { value: '2', label: 'Branches' },
+            ].map((stat) => (
+              <div key={stat.label} className="border-l-2 border-primary/30 pl-4">
+                <p className="text-2xl font-bold text-stone-800">{stat.value}</p>
+                <p className="text-stone-400 text-xs tracking-wider uppercase mt-0.5">{stat.label}</p>
+              </div>
+            ))}
           </motion.div>
 
-          {/* Headline */}
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={1}
-            className="text-3xl sm:text-5xl lg:text-3xl xl:text-7xl font-bold text-primary-dark leading-[1.05] tracking-tight mb-6"
-          >
-            The
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">
-               <span> </span>#1 Manufacturer
-            </span>
-            <br />
-            in the Philippines.
-          </motion.h1>
-
-          {/* Sub */}
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={2}
-            className="text-black/50 text-lg lg:text-xl leading-relaxed max-w-auto mb-10"
-          >
-            Zenoboard Philippines manufactures premium laminated marine plywood for residential and commercial projects — direct from factory to site.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={3}
-            className="flex flex-wrap gap-4 align-middle justify-center"
-          >
-            <Link
-              to="/products"
-              className="group inline-flex items-center gap-2.5 px-7 py-3.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-light transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
-            >
-              Explore Products
-              <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-black/5 backdrop-blur-sm text-primary-dark font-semibold rounded-full border border-black/15 hover:bg-black/10 transition-all duration-300"
-            >
-              <FiPlay className="text-sm" />
-              Get a Quote
-            </Link>
-          </motion.div>
+          {/* Bottom dot grid */}
+          <DotGrid className="absolute bottom-8 left-6 opacity-40 hidden lg:grid" />
         </div>
 
-        {/* Stats */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={4}
-          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10"
-        >
-          {[
-            { value: '15+', label: 'Years Experience' },
-            { value: 'AAA', label: 'Quality Grade' },
-            { value: '500+', label: 'Projects Completed' },
-            { value: '2', label: 'Branch Locations' },
-          ].map((stat) => (
-            <div key={stat.label} className="border-l-2 border-primary/40 pl-4">
-              <p className="text-3xl font-bold text-primary-dark mb-1">{stat.value}</p>
-              <p className="text-black/40 text-xs tracking-wider uppercase">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+        {/* RIGHT — Slideshow image */}
+        <div className="relative lg:w-1/2 min-h-[50vh] lg:min-h-0 overflow-hidden bg-stone-100">
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-black/30 text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-black/30 to-transparent" />
-      </motion.div>
+          {/* Dot grid on top-left of image panel */}
+          <DotGrid className="absolute top-6 -left-4 z-10 opacity-80 hidden lg:grid" />
+
+          <AnimatePresence mode="sync">
+            <motion.img
+              key={current}
+              src={slides[current].src}
+              alt={slides[current].alt}
+              initial={{ opacity: 0, scale: 1.04 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 1.2, ease: 'easeInOut' }}
+              className="absolute inset-0 w-full h-full object-cover"
+              onError={(e) => { e.target.style.display = 'none' }}
+            />
+
+            {/* Placeholder shown when image is missing */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-stone-200 text-stone-400">
+              <svg className="w-16 h-16 mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p className="text-sm font-medium">Add your image here</p>
+              <p className="text-xs mt-1 opacity-60">{slides[current].src}</p>
+            </div>
+          </AnimatePresence>
+
+          {/* Slide counter badge */}
+          <div className="absolute bottom-6 right-6 z-10 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-3 shadow-lg">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`transition-all duration-300 rounded-full ${
+                  i === current
+                    ? 'w-6 h-2 bg-primary'
+                    : 'w-2 h-2 bg-stone-300 hover:bg-primary/50'
+                }`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Gradient overlay left edge to blend with content */}
+          <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent hidden lg:block" />
+        </div>
+      </div>
     </section>
   )
 }

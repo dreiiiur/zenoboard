@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
 import HeroSection from '../components/HeroSection'
+import Testimonial from '../components/Testimonial'
 import ProductCard from '../components/ProductCard'
 import FeatureCard from '../components/FeatureCard'
 import GallerySection from '../components/GallerySection'
@@ -100,6 +101,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonial */}
+      <Testimonial />
 
       {/* Applications */}
       <section className="py-28 bg-white">

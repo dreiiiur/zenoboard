@@ -6,6 +6,7 @@ import Products from '../pages/Products'
 import ProductDetails from '../pages/ProductDetails'
 import Applications from '../pages/Applications'
 import Contact from '../pages/Contact'
+import TestimonialsPage from '../pages/TestimonialsPage'
 
 export default function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AppRoutes() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/applications" element={<Applications />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
