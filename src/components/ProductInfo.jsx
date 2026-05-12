@@ -100,19 +100,19 @@ export default function ProductInfo({ product }) {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 pt-2">
         <button
-          onClick={handleRequest}
-          className={`flex-1 group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 font-semibold rounded-xl transition-all duration-300 ${
-            requested
-              ? 'bg-green-500 text-white'
-              : 'bg-blue-500 text-white hover:bg-blue-600 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5'
-          }`}
-        >
-          {requested ? (
-            <><FiCheck className="text-lg" /> Request Sent!</>
-          ) : (
-            <><FaFacebookMessenger />Messenger</>
-          )}
-        </button>
+  onClick={() => window.open('https://www.facebook.com/profile.php?id=61576497621623', '_blank')}
+  className={`flex-1 group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 font-semibold rounded-xl transition-all duration-300 ${
+    requested
+      ? 'bg-green-500 text-white'
+      : 'bg-blue-500 text-white hover:bg-blue-600 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5'
+  }`}
+>
+  {requested ? (
+    <><FiCheck className="text-lg" /> Request Sent!</>
+  ) : (
+    <><FaFacebookMessenger />Messenger</>
+  )}
+</button>
 
         <Link
           to="/contact"
