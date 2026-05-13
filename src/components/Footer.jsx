@@ -7,6 +7,7 @@ const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About Us' },
   { path: '/products', label: 'Products' },
+  { path: '/testimonials', label: 'TestimonialsPage' },
   { path: '/applications', label: 'Applications' },
   { path: '/contact', label: 'Contact' },
 ]
@@ -16,6 +17,7 @@ const products = [
   { path: '/products/straight-oak', label: 'Straight Oak' },
   { path: '/products/wenge', label: 'Wenge' },
   { path: '/products/white', label: 'White' },
+  { path: '/products/gray', label: 'Gray' },
 ]
 
 export default function Footer() {
