@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
-              <img src="/logo.png" alt="ZenoBoard Logo" className="w-32" />
+              <img src="/logo1.png" alt="ZenoBoard Logo" className="w-32" />
             </Link>
 
             {/* Desktop Nav */}
