@@ -5,13 +5,13 @@ import { FiArrowRight, FiPlay } from 'react-icons/fi'
 
 const slides = [
   {
-    src: '/logo-negative.png',
+    src: '/hero-image.png',
     alt: 'Premium interior',
     headline: <>The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">#1 Manufacturer</span><br />in the Philippines.</>,
     sub: 'Zenoboard Philippines manufactures premium laminated marine plywood for residential and commercial projects.',
   },
   {
-    src: '/hero-image-2.png',
+    src: '/hero2.jpg',
     alt: 'Marine plywood application',
     headline: <>Built for<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Every Project.</span></>,
     sub: 'From kitchen cabinets to commercial fit-outs — Zenoboard delivers Grade AAA quality every time.',
@@ -33,7 +33,6 @@ const fadeUp = {
   }),
 }
 
-// Dot grid pattern
 function DotGrid({ className }) {
   return (
     <div className={`grid gap-2 ${className}`} style={{ gridTemplateColumns: 'repeat(8, 1fr)' }}>
@@ -46,6 +45,7 @@ function DotGrid({ className }) {
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0)
+  const [imgErrors, setImgErrors] = useState({})
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -55,18 +55,16 @@ export default function HeroSection() {
   }, [])
 
   const slide = slides[current]
+  const hasError = imgErrors[current]
 
   return (
     <section className="relative min-h-screen flex flex-col bg-white overflow-hidden">
 
-    
-      {/* Main hero area */}
       <div className="flex-1 flex flex-col lg:flex-row">
 
         {/* LEFT — Content */}
-        <div className="relative flex flex-col justify-center px-8 sm:px-12 lg:px-16 xl:px-24 pt-28 lg:pt-16 pb-16 lg:w-1/2 z-10">
+        <div className="relative flex flex-col justify-center px-8 sm:px-12 lg:px-16 xl:px-24 pt-28 lg:pt-16 pb-16 lg:w-1/2 z-10 bg-white">
 
-          {/* Dot grid decoration */}
           <DotGrid className="absolute top-24 left-6 opacity-60 hidden lg:grid" />
 
           <AnimatePresence mode="wait">
@@ -147,7 +145,7 @@ export default function HeroSection() {
             className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-6"
           >
             {[
-              { value: '15+', label: 'Years Experience' },
+              { value: 'Eucalyptus', label: 'Material Quality' },
               { value: 'AAA', label: 'Quality Grade' },
               { value: '500+', label: 'Projects Done' },
               { value: '2', label: 'Branches' },
@@ -159,40 +157,55 @@ export default function HeroSection() {
             ))}
           </motion.div>
 
-          {/* Bottom dot grid */}
           <DotGrid className="absolute bottom-8 left-6 opacity-40 hidden lg:grid" />
         </div>
 
         {/* RIGHT — Slideshow image */}
-        <div className="relative lg:w-1/2 min-h-[50vh] lg:min-h-0 overflow-hidden bg-stone-100">
+        <div className="relative lg:w-1/2 min-h-[50vh] lg:min-h-0 overflow-hidden bg-stone-100 opacity-85">
 
-          {/* Dot grid on top-left of image panel */}
           <DotGrid className="absolute top-6 -left-4 z-10 opacity-80 hidden lg:grid" />
 
           <AnimatePresence mode="sync">
-            <motion.img
-              key={current}
-              src={slides[current].src}
-              alt={slides[current].alt}
-              initial={{ opacity: 0, scale: 1.04 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 1.2, ease: 'easeInOut' }}
-              className="absolute inset-0 w-full h-full object-cover"
-              onError={(e) => { e.target.style.display = 'none' }}
-            />
-
-            {/* Placeholder shown when image is missing */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-stone-200 text-stone-400">
-              <svg className="w-16 h-16 mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p className="text-sm font-medium">Add your image here</p>
-              <p className="text-xs mt-1 opacity-60">{slides[current].src}</p>
-            </div>
+            {hasError ? (
+              <motion.div
+                key={`placeholder-${current}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0 flex flex-col items-center justify-center bg-stone-200 text-stone-400"
+              >
+                <svg className="w-16 h-16 mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p className="text-sm font-medium">Add your image here</p>
+                <p className="text-xs mt-1 opacity-60">{slides[current].src}</p>
+              </motion.div>
+            ) : (
+              <motion.img
+                key={`img-${current}`}
+                src={slides[current].src}
+                alt={slides[current].alt}
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 1.2, ease: 'easeInOut' }}
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={() => setImgErrors((prev) => ({ ...prev, [current]: true }))}
+              />
+            )}
           </AnimatePresence>
 
-          {/* Slide counter badge */}
+          {/* Long natural gradient — fades from solid white into transparent over ~40% of the image width */}
+          <div
+            className="absolute inset-y-0 left-0 hidden lg:block pointer-events-none"
+            style={{
+              width: '45%',
+              background: 'linear-gradient(to right, white 0%, white 20%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0) 100%)',
+            }}
+          />
+
+          {/* Slide dots */}
           <div className="absolute bottom-6 right-6 z-10 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-3 shadow-lg">
             {slides.map((_, i) => (
               <button
@@ -207,10 +220,8 @@ export default function HeroSection() {
               />
             ))}
           </div>
-
-          {/* Gradient overlay left edge to blend with content */}
-          <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent hidden lg:block" />
         </div>
+
       </div>
     </section>
   )

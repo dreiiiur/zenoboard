@@ -1,6 +1,8 @@
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { FiArrowRight } from 'react-icons/fi'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FiArrowRight, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+import { FaFacebook } from 'react-icons/fa'
 import HeroSection from '../components/HeroSection'
 import Testimonial from '../components/Testimonial'
 import ProductCard from '../components/ProductCard'
@@ -11,7 +13,147 @@ import BranchCard from '../components/BranchCard'
 import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
 
+// ─── ADD YOUR FACEBOOK REELS HERE ───────────────────────────────────────────
+// How to get the embed URL:
+// 1. Go to your Facebook reel/video
+// 2. Click ··· → Embed
+// 3. Copy only the VIDEO ID from the URL (the long number)
+// 4. Paste it as the `videoId` below
+//
+// Example: https://www.facebook.com/reel/1234567890
+//          videoId: '1234567890'
+const reels = [
+  {
+    id: 1,
+    videoId: '2069748277269677',
+    title: 'The #1 Manufacturer',
+    label: 'Zenoboard PH',
+  },
+  {
+    id: 2,
+    videoId: '3875512342754721',
+    title: 'Cleaning with Ease',
+    label: 'Product Showcase',
+  },
+  {
+    id: 3,
+    videoId: '3126484644190282',
+    title: 'Premium Laminated Plywood',
+    label: 'Product Showcase',
+  },
+  {
+    id: 4,
+    videoId: '1500293705037236',
+    title: 'AAA Grade Quality',
+    label: 'Quality Check',
+  },
+  {
+    id: 5,
+    videoId: '2808638626181424',
+    title: 'Bakit nga ba palaging Zenoboard?',
+    label: 'Product specifications and benefits',
+  },
+]
+// ────────────────────────────────────────────────────────────────────────────
+
+function ReelCard({ reel, index, onOpen }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="group relative flex-shrink-0 w-44 sm:w-52 cursor-pointer"
+      onClick={() => onOpen(reel)}
+    >
+      {/* Vertical card — 9:16 ratio */}
+      <div className="relative rounded-2xl overflow-hidden bg-stone-800 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300"
+        style={{ aspectRatio: '9/16' }}
+      >
+        {/* Facebook embed preview (loads the actual reel thumbnail) */}
+        <iframe
+          src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${reel.videoId}&show_text=false&mute=1&autoplay=0`}
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          scrolling="no"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          title={reel.title}
+        />
+
+        {/* Overlay — click to open modal */}
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+        {/* Play button */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+            <FaFacebook className="text-white text-2xl" />
+          </div>
+        </div>
+
+        {/* Bottom label */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-8">
+          <p className="text-white/60 text-xs mb-0.5">{reel.label}</p>
+          <p className="text-white text-sm font-semibold leading-tight">{reel.title}</p>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
+function ReelModal({ reel, onClose }) {
+  if (!reel) return null
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm px-4"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.9, opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="relative bg-black rounded-3xl overflow-hidden shadow-2xl"
+          style={{ width: '100%', maxWidth: '400px', aspectRatio: '9/16' }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Close */}
+          <button
+            onClick={onClose}
+            className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-primary transition-colors"
+          >
+            <FiX />
+          </button>
+
+          {/* Facebook video embed */}
+          <iframe
+            src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${reel.videoId}&show_text=false&autoplay=1`}
+            className="w-full h-full"
+            scrolling="no"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen
+            title={reel.title}
+          />
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
 export default function Home() {
+  const [activeReel, setActiveReel] = useState(null)
+  const scrollRef = useRef(null)
+
+  const scroll = (dir) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: dir * 240, behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       <HeroSection />
@@ -41,66 +183,71 @@ export default function Home() {
         </div>
       </section>
 
- {/* About Teaser */}
-      <section className="py-28 bg-white">
+      {/* Reels Section */}
+      <section className="py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-widest uppercase mb-5">
-                About Zenoboard
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-6">
+            <div>
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
+                <FaFacebook className="text-blue-600 text-sm" />
+                <span className="text-blue-600 text-xs font-semibold tracking-widest uppercase">Advetisements</span>
               </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-stone-800 leading-tight mb-6">
-                The Standard of
-                <span className="text-primary block">Philippine Plywood</span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-stone-800 leading-tight">
+                Watch Our<br />
+                <span className="text-primary">Ads & Commercials</span>
               </h2>
-              <p className="text-stone-500 text-lg leading-relaxed mb-6">
-                Zenoboard Philippines is a trusted manufacturer of laminated marine plywood, delivering Grade Triple A quality for residential and commercial projects across the country.
+              <p className="text-stone-500 mt-3 max-w-md">
+                See Zenoboard in action — from our factory floor to stunning finished interiors.
               </p>
-              <p className="text-stone-500 leading-relaxed mb-8">
-                With state-of-the-art production facilities in Pulilan, Bulacan, we combine advanced manufacturing technology with premium raw materials to produce plywood that's built to last.
-              </p>
-              <Link
-                to="/about"
-                className="group inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
-              >
-                Learn More About Us
-                <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
-                <img
-                  src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80"
-                  alt="Manufacturing facility"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary text-white rounded-2xl p-5 shadow-xl">
-                <p className="text-3xl font-bold">15+</p>
-                <p className="text-white/70 text-sm">Years of Excellence</p>
-              </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 rounded-2xl bg-stone-100 border border-stone-200 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">AAA</p>
-                  <p className="text-stone-500 text-xs">Grade</p>
-                </div>
-              </div>
-            </motion.div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => scroll(-1)}
+                className="w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-200"
+              >
+                <FiChevronLeft />
+              </button>
+              <button
+                onClick={() => scroll(1)}
+                className="w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-200"
+              >
+                <FiChevronRight />
+              </button>
+              <a
+                href="https://www.facebook.com/profile.php?id=61576497621623"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-all duration-300"
+              >
+                <FaFacebook />
+                Follow Us
+              </a>
+            </div>
+          </div>
+
+          {/* Horizontal scroll reel strip */}
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {reels.map((reel, i) => (
+              <ReelCard
+                key={reel.id}
+                reel={reel}
+                index={i}
+                onOpen={setActiveReel}
+              />
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Reel Modal */}
+      {activeReel && (
+        <ReelModal reel={activeReel} onClose={() => setActiveReel(null)} />
+      )}
 
       {/* Testimonial */}
       <Testimonial />
