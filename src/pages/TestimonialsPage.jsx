@@ -174,7 +174,6 @@ export default function TestimonialsPage() {
             {[
               { value: '500+', label: 'Happy Clients' },
               { value: '4.9★', label: 'Average Rating' },
-              { value: '15+', label: 'Years Trusted' },
               { value: '100%', label: 'AAA Grade' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
