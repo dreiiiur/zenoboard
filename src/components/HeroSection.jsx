@@ -146,8 +146,8 @@ export default function HeroSection() {
           >
             {[
               { value: 'Eucalyptus', label: 'Material Quality' },
-              { value: 'AAA', label: 'Quality Grade' },
-              { value: '500+', label: 'Projects Done' },
+              { value: 'AAA+', label: 'Quality Grade' },
+              { value: '500+', label: 'Clients' },
               { value: '2', label: 'Branches' },
             ].map((stat) => (
               <div key={stat.label} className="border-l-2 border-primary/30 pl-4">

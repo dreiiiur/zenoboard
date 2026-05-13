@@ -24,7 +24,7 @@ export const products = [
       core: 'Marine Grade Hardwood',
       finish: 'High-Pressure Laminate (HPL)',
       glueStandard: 'WBP (Weather & Boil Proof)',
-      grade: 'Triple A',
+      grade: 'Grade AAA+',
       surface: 'Double-sided laminate',
     },
     images: [
@@ -60,7 +60,7 @@ export const products = [
       core: 'Marine Grade Hardwood',
       finish: 'High-Pressure Laminate (HPL)',
       glueStandard: 'WBP (Weather & Boil Proof)',
-      grade: 'Triple A',
+      grade: 'Grade AAA+',
       surface: 'Double-sided laminate',
     },
     images: [
@@ -98,7 +98,7 @@ export const products = [
       core: 'Marine Grade Hardwood',
       finish: 'High-Pressure Laminate (HPL)',
       glueStandard: 'WBP (Weather & Boil Proof)',
-      grade: 'Triple A',
+      grade: 'Grade AAA+',
       surface: 'Double-sided laminate',
     },
     images: [
@@ -134,7 +134,7 @@ export const products = [
       core: 'Marine Grade Hardwood',
       finish: 'High-Pressure Laminate (HPL)',
       glueStandard: 'WBP (Weather & Boil Proof)',
-      grade: 'Triple A',
+      grade: 'Grade AAA+',
       surface: 'Double-sided laminate',
     },
     images: [
@@ -172,7 +172,7 @@ export const products = [
       core: 'Marine Grade Hardwood',
       finish: 'High-Pressure Laminate (HPL)',
       glueStandard: 'WBP (Weather & Boil Proof)',
-      grade: 'Triple A',
+      grade: 'Grade AAA+',
       surface: 'Double-sided laminate',
     },
     images: [

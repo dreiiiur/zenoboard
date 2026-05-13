@@ -68,7 +68,7 @@ export default function About() {
                 As a direct manufacturer, we cut out the middlemen and deliver better value to our clients without compromising on quality. From contractors and architects to homeowners and furniture makers — we're the partner you can count on.
               </p>
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-stone-100">
-                {[['500+', 'Projects'], ['2', 'Branches']].map(([val, label]) => (
+                {[['500+', 'Clients'], ['2', 'Branches'], ['5.0 ★', 'Average Rating']].map(([val, label]) => (
                   <div key={label}>
                     <p className="text-3xl font-bold text-primary mb-1">{val}</p>
                     <p className="text-stone-500 text-sm">{label}</p>

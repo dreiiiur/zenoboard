@@ -229,9 +229,8 @@ export default function Testimonial() {
         {/* Trust badges */}
         <div className="mt-12 flex flex-wrap justify-center gap-8 text-center">
           {[
-            { value: '500+', label: 'Happy Clients' },
-            { value: '4.9★', label: 'Average Rating' },
-            { value: '15+', label: 'Years Trusted' },
+            { value: '500+', label: 'Clients' },
+            { value: '5.0★', label: 'Average Rating' },
           ].map((badge) => (
             <div key={badge.label} className="flex flex-col items-center">
               <p className="text-2xl font-bold text-primary">{badge.value}</p>
