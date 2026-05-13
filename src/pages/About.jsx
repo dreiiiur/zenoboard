@@ -68,7 +68,7 @@ export default function About() {
                 As a direct manufacturer, we cut out the middlemen and deliver better value to our clients without compromising on quality. From contractors and architects to homeowners and furniture makers — we're the partner you can count on.
               </p>
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-stone-100">
-                {[['15+', 'Years'], ['500+', 'Projects'], ['2', 'Branches']].map(([val, label]) => (
+                {[['500+', 'Projects'], ['2', 'Branches']].map(([val, label]) => (
                   <div key={label}>
                     <p className="text-3xl font-bold text-primary mb-1">{val}</p>
                     <p className="text-stone-500 text-sm">{label}</p>
@@ -84,17 +84,17 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="grid grid-cols-2 gap-4"
             >
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="" className="rounded-2xl object-cover aspect-[3/4]" />
+              <img src="/products/walnut/walnut-sample1.png" alt="" className="rounded-2xl object-cover aspect-[3/4]" />
               <div className="flex flex-col gap-4 pt-8">
-                <img src="https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=400&q=80" alt="" className="rounded-2xl object-cover aspect-square" />
-                <img src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=400&q=80" alt="" className="rounded-2xl object-cover aspect-square" />
+                <img src="/products/white/white-sample1.png" alt="" className="rounded-2xl object-cover aspect-square" />
+                <img src="/products/wenge/wenge-sample1.png" alt="" className="rounded-2xl object-cover aspect-square" />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Timeline 
       <section className="py-28 bg-stone-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <SectionHeader
@@ -129,7 +129,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-28 bg-white">

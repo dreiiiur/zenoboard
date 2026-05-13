@@ -98,8 +98,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <FiMail className="text-primary shrink-0" />
-                <a href="mailto:info@zenoboard.ph" className="text-stone-400 hover:text-white text-sm transition-colors">
-                  info@zenoboard.ph
+                <a href="mailto:zenoboardphilippines@gmail.com" className="text-stone-400 hover:text-white text-sm transition-colors">
+                  zenoboardphilippines@gmail.com
                 </a>
               </li>
             </ul>

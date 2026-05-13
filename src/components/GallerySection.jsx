@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80', span: 'col-span-2 row-span-2', alt: 'Modern interior' },
-  { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80', span: '', alt: 'Kitchen cabinet' },
-  { src: 'https://images.unsplash.com/photo-1493806756757-e6ef97df45ec?w=600&q=80', span: '', alt: 'Wardrobe' },
-  { src: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80', span: '', alt: 'TV console' },
-  { src: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80', span: '', alt: 'Office table' },
-  { src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80', span: 'col-span-2', alt: 'Bedroom' },
+  { src: '/applications/kitchen-cabinet.png', span: 'col-span-2 row-span-2', alt: 'Modern interior' },
+  { src: '/applications/living-room.png', span: '', alt: 'Living room' },
+  { src: '/applications/wardrobe.png', span: '', alt: 'Wardrobe' },
+  { src: '/applications/tv-console.png', span: '', alt: 'TV console' },
+  { src: '/applications/office.png', span: '', alt: 'Office table' },
+  { src: '/applications/bedroom.png', span: 'col-span-2', alt: 'Bedroom' },
 ]
 
 export default function GallerySection() {

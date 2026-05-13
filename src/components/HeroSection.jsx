@@ -17,7 +17,7 @@ const slides = [
     sub: 'From kitchen cabinets to commercial fit-outs — Zenoboard delivers Grade AAA quality every time.',
   },
   {
-    src: '/hero-image-3.png',
+    src: '/hero3.png',
     alt: 'Residential project',
     headline: <>Direct from<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Factory to Site.</span></>,
     sub: 'Skip the middleman. Get premium laminated marine plywood straight from our Bulacan manufacturing plant.',
