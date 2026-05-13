@@ -11,7 +11,7 @@ const testimonials = [
     location: 'Quezon City',
     quote: 'Zenoboard has been our go-to supplier for all cabinet and millwork projects. The AAA grade finish is consistent every single batch — our clients always notice the difference.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const testimonials = [
     location: 'Bulacan',
     quote: 'We have tried many plywood brands over the years, but Zenoboard is the only one that holds up perfectly even in high-humidity areas. The marine-grade core makes all the difference for kitchen projects.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const testimonials = [
     location: 'Pampanga',
     quote: 'Direct from the factory means better pricing and fresher stock. We order in bulk every month and delivery is always on time. Highly recommend to fellow fabricators.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const testimonials = [
     location: 'Makati City',
     quote: 'The laminate surface quality is exceptional — smooth, uniform, and takes paint and veneer incredibly well. Zenoboard is now specified in all our residential projects.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const testimonials = [
     location: 'Laguna',
     quote: 'We furnished over 200 condo units with Zenoboard products. Zero complaints from homeowners, and the material held up beautifully over three years. Outstanding value.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
   },
 ]
 

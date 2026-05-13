@@ -12,7 +12,7 @@ const testimonials = [
     location: 'Quezon City',
     quote: 'Zenoboard has been our go-to supplier for all cabinet and millwork projects. The AAA grade finish is consistent every single batch — our clients always notice the difference.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Architect',
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     location: 'Bulacan',
     quote: 'We have tried many plywood brands over the years, but Zenoboard is the only one that holds up perfectly even in high-humidity areas. The marine-grade core makes all the difference for kitchen projects.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Contractor',
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     location: 'Pampanga',
     quote: 'Direct from the factory means better pricing and fresher stock. We order in bulk every month and delivery is always on time. Highly recommend to fellow fabricators.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Manufacturer',
   },
   {
@@ -45,7 +45,7 @@ const testimonials = [
     location: 'Makati City',
     quote: 'The laminate surface quality is exceptional — smooth, uniform, and takes paint and veneer incredibly well. Zenoboard is now specified in all our residential projects.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Architect',
   },
   {
@@ -56,7 +56,7 @@ const testimonials = [
     location: 'Laguna',
     quote: 'We furnished over 200 condo units with Zenoboard products. Zero complaints from homeowners, and the material held up beautifully over three years. Outstanding value.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Developer',
   },
   {
@@ -67,7 +67,7 @@ const testimonials = [
     location: 'Pasig City',
     quote: 'I have specialized in interior design for over 20 years and Zenoboard in over 30 residential projects and the results are consistently stunning. Clients love the finish and contractors love how easy it is to work with.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Architect',
   },
   {
@@ -78,7 +78,7 @@ const testimonials = [
     location: 'Bulacan',
     quote: 'The consistency of the board thickness and the smoothness of the laminate finish saves us hours in sanding and prep. Zenoboard is simply the best for cabinetry work.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Manufacturer',
   },
   {
@@ -89,7 +89,7 @@ const testimonials = [
     location: 'Cavite',
     quote: 'Used Zenoboard for a 5-storey commercial fit-out and it performed beyond expectations. Moisture resistance held up in the restroom areas without warping. Impressive material.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Contractor',
   },
   {
@@ -100,7 +100,7 @@ const testimonials = [
     location: 'Cebu City',
     quote: 'Sourcing quality materials for our Cebu projects used to be a challenge until we found Zenoboard. Delivery to the province is reliable and the product quality justifies every peso.',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
+    image: 'https://i.pinimg.com/736x/05/11/45/051145a8e366876f859378154aa7df8b.jpg',
     category: 'Developer',
   },
 ]
