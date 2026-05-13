@@ -31,7 +31,7 @@ export const products = [
       '/products/walnut/Walnut.png',
       '/products/walnut/walnut-sample1.png',
     ],
-    color: '#2C1A0E',
+    color: '#8C6D51',
     applications: ['Kitchen Cabinets', 'Wardrobes', 'Office Tables', 'TV Consoles'],
     tags: ['Dark', 'Premium', 'Elegant'],
   },
