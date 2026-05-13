@@ -115,7 +115,7 @@ export default function Products() {
               className="relative rounded-3xl overflow-hidden aspect-square"
             >
               <img
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80"
+                src="/products.png"
                 alt="Material detail"
                 className="w-full h-full object-cover"
               />
