@@ -6,15 +6,25 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     chunkSizeWarningLimit: 1000,
-    // Uses esbuild (built into Vite) instead of terser — no install needed
     minify: 'esbuild',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          motion: ['framer-motion'],
-          icons: ['react-icons'],
-          emailjs: ['@emailjs/browser'],
+        // Vite 6+ requires manualChunks as a function, not an object
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-dom') || id.includes('react-router-dom')) {
+              return 'vendor'
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion'
+            }
+            if (id.includes('react-icons')) {
+              return 'icons'
+            }
+            if (id.includes('@emailjs')) {
+              return 'emailjs'
+            }
+          }
         },
       },
     },
