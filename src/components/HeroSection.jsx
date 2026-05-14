@@ -5,25 +5,25 @@ import { FiArrowRight, FiPlay } from 'react-icons/fi'
 
 const slides = [
   {
-    src: '/hero6.png',
+    src: '/hero6.webp',
     alt: 'Premium interior',
     headline: <>The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">#1 Manufacturer</span><br />in the Philippines.</>,
     sub: 'Zenoboard Philippines manufactures premium laminated marine plywood for residential and commercial projects.',
   },
   {
-    src: '/hero-image.png',
+    src: '/hero-image.webp',
     alt: 'Marine plywood application',
     headline: <>Built for<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Every Project.</span></>,
     sub: 'From kitchen cabinets to commercial fit-outs — Zenoboard delivers Grade AAA quality every time.',
   },
   {
-    src: '/hero7.png',
+    src: '/hero7.webp',
     alt: 'Residential project',
     headline: <>Direct from<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Factory to Site.</span></>,
     sub: 'Skip the middleman. Get premium laminated marine plywood straight from our Bulacan manufacturing plant.',
   },
    {
-    src: '/hero5.png',
+    src: '/hero5.webp',
     alt: 'Business to Business',
     headline: <>Business to Business<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Transactions.</span></>,
     sub: 'We accomodate both B2C and B2B clients, providing tailored solutions for residential projects and commercial fit-outs alike.',
