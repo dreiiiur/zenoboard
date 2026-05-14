@@ -175,7 +175,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reels Section */}
+      {/* Reels Section 
       <section className="py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-6">
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Horizontal scroll reel strip */}
+           Horizontal scroll reel strip 
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
@@ -236,10 +236,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reel Modal 
+      {/* Reel Modal
       {activeReel && (
         <ReelModal reel={activeReel} onClose={() => setActiveReel(null)} />
-      )}*/}
+      )}  */}
 
       {/* Testimonial */}
       <Testimonial />
