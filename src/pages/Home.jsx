@@ -71,7 +71,7 @@ function ReelCard({ reel, index, onOpen }) {
         {/* Static thumbnail instead of iframe */}
         <div className="absolute inset-0 bg-gradient-to-b from-stone-700 to-stone-900" />
         <img
-          src={reel.thumbnail || `https://graph.facebook.com/${reel.videoId}/picture?type=large`}
+          src={reel.thumbnail}
           alt={reel.title}
           className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
         />
