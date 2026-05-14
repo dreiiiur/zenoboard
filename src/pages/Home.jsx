@@ -13,48 +13,40 @@ import BranchCard from '../components/BranchCard'
 import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
 
-// ─── ADD YOUR FACEBOOK REELS HERE ───────────────────────────────────────────
-// How to get the embed URL:
-// 1. Go to your Facebook reel/video
-// 2. Click ··· → Embed
-// 3. Copy only the VIDEO ID from the URL (the long number)
-// 4. Paste it as the `videoId` below
-//
-// Example: https://www.facebook.com/reel/1234567890
-//          videoId: '1234567890'
-const reels = [
-  {
-    id: 1,
-    videoId: '2069748277269677',
-    title: 'The #1 Manufacturer',
-    label: 'Zenoboard PH',
-  },
-  {
-    id: 2,
-    videoId: '3875512342754721',
-    title: 'Cleaning with Ease',
-    label: 'Product Showcase',
-  },
-  {
-    id: 3,
-    videoId: '3126484644190282',
-    title: 'Premium Laminated Plywood',
-    label: 'Product Showcase',
-  },
-  {
-    id: 4,
-    videoId: '1500293705037236',
-    title: 'AAA Grade Quality',
-    label: 'Quality Check',
-  },
-  {
-    id: 5,
-    videoId: '2808638626181424',
-    title: 'Bakit nga ba palaging Zenoboard?',
-    label: 'Product specifications and benefits',
-  },
-]
-// ────────────────────────────────────────────────────────────────────────────
+
+//const reels = [
+//  {
+//    id: 1,
+//    videoId: '2069748277269677',
+//    title: 'The #1 Manufacturer',
+//    label: 'Zenoboard PH',
+//  },
+//  {
+//    id: 2,
+//    videoId: '3875512342754721',
+//    title: 'Cleaning with Ease',
+//    label: 'Product Showcase',
+//  },
+//  {
+//    id: 3,
+//    videoId: '3126484644190282',
+//    title: 'Premium Laminated Plywood',
+//    label: 'Product Showcase',
+//  },
+//  {
+//   id: 4,
+//    videoId: '1500293705037236',
+//    title: 'AAA Grade Quality',
+//    label: 'Quality Check',
+//  },
+//  {
+//    id: 5,
+//  videoId: '2808638626181424',
+  //  title: 'Bakit nga ba palaging Zenoboard?',
+    //label: 'Product specifications and benefits',
+ // },
+//]
+
 
 function ReelCard({ reel, index, onOpen }) {
   return (
@@ -244,10 +236,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reel Modal */}
+      {/* Reel Modal 
       {activeReel && (
         <ReelModal reel={activeReel} onClose={() => setActiveReel(null)} />
-      )}
+      )}*/}
 
       {/* Testimonial */}
       <Testimonial />
