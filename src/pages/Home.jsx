@@ -70,11 +70,11 @@ function ReelCard({ reel, index, onOpen }) {
       >
         {/* Static thumbnail instead of iframe */}
         <div className="absolute inset-0 bg-gradient-to-b from-stone-700 to-stone-900" />
-        <img
+       {/* <img
           src={reel.thumbnail}
           alt={reel.title}
           className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-        />
+        /> */}
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
