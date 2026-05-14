@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
               <div>
-                <img src="/logo-negative.png" alt="ZenoBoard Logo" className="w-32" />
+                <img src="/logo-negative1.png" alt="ZenoBoard Logo" className="w-33 h-12" />
               </div>
             </Link>
             <p className="text-stone-400 text-sm leading-relaxed mb-6">
