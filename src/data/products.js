@@ -188,37 +188,37 @@ export const applications = [
   {
     id: 'kitchen-cabinets',
     name: 'Kitchen Cabinets',
-    image: '/applications/kitchen-cabinet.png',
+    image: '/applications/kitchen-cabinet.webp',
     description: 'Moisture-resistant plywood ideal for kitchen environments',
   },
   {
     id: 'wardrobes',
     name: 'Wardrobes',
-    image: '/applications/wardrobe.png',
+    image: '/applications/wardrobe.webp',
     description: 'Structural integrity for heavy wardrobe installations',
   },
   {
     id: 'office-tables',
     name: 'Office Tables',
-    image: '/applications/office.png',
+    image: '/applications/office.webp',
     description: 'Professional finish for corporate furniture solutions',
   },
   {
     id: 'tv-consoles',
     name: 'TV Consoles',
-    image: '/applications/tv-console.png',
+    image: '/applications/tv-console.webp',
     description: 'Elegant entertainment furniture with premium aesthetics',
   },
   {
     id: 'commercial-interiors',
     name: 'Commercial Interiors',
-    image: '/applications/interior.png', 
+    image: '/applications/interior.webp', 
     description: 'Durable solutions for high-traffic commercial spaces',
   },
   {
     id: 'bedroom-furniture',
     name: 'Bedroom Furniture',
-    image: '/applications/bedroom.png',
+    image: '/applications/bedroom.webp',
     description: 'Premium bedroom sets that last a lifetime',
   },
 ];
