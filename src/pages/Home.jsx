@@ -207,7 +207,6 @@ export default function Home() {
             </div>
           </div>
 
-           Horizontal scroll reel strip 
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
