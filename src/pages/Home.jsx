@@ -57,22 +57,12 @@ function ReelCard({ reel, index, onOpen }) {
       className="group relative flex-shrink-0 w-44 sm:w-52 cursor-pointer"
       onClick={() => onOpen(reel)}
     >
-      {/* Vertical card — 9:16 ratio */}
-      <div className="relative rounded-2xl overflow-hidden bg-stone-800 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300"
+      <div
+        className="relative rounded-2xl overflow-hidden bg-stone-800 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300"
         style={{ aspectRatio: '9/16' }}
       >
-        {/* Facebook embed preview (loads the actual reel thumbnail) */}
-        <iframe
-          src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${reel.videoId}&show_text=false&mute=1&autoplay=0`}
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          scrolling="no"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          title={reel.title}
-        />
-
-        {/* Overlay — click to open modal */}
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+        {/* Static thumbnail instead of iframe */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-700 to-stone-900" />
 
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">

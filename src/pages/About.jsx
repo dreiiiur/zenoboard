@@ -19,7 +19,7 @@ export default function About() {
       <section className="relative pt-40 pb-24 bg-[#1a1209] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1600&q=80"
+            src="/applications/interior.webp"
             alt="Manufacturing"
             className="w-full h-full object-cover opacity-25"
           />
