@@ -15,37 +15,42 @@ import { products, applications, branches, features } from '../data/products'
 
 
 const reels = [
-{
-id: 1,
-   videoId: '2069748277269677',
+  {
+    id: 1,
+    videoId: '2069748277269677',
+    thumbnail: '/thumbnails/Commercial4.webp',
     title: 'The #1 Manufacturer',
     label: 'Zenoboard PH',
- },
- {
-   id: 2,
-   videoId: '3875512342754721',
+  },
+  {
+    id: 2,
+    videoId: '3875512342754721',
+    thumbnail: '/thumbnails/Commercial3.webp',
     title: 'Cleaning with Ease',
-   label: 'Product Showcase',
+    label: 'Product Showcase',
   },
   {
     id: 3,
+    videoId: '3126484644190282',
+    thumbnail: '/thumbnails/Commercial2.webp',
     title: 'Premium Laminated Plywood',
-   label: 'Product Showcase',
- },
+    label: 'Product Showcase',
+  },
   {
-   id: 4,
+    id: 4,
     videoId: '1500293705037236',
-   title: 'AAA Grade Quality',
-   label: 'Quality Check',
+    thumbnail: '/thumbnails/commercial1.webp',
+    title: 'AAA Grade Quality',
+    label: 'Quality Check',
   },
   {
     id: 5,
-  videoId: '2808638626181424',
-   title: 'Bakit nga ba palaging Zenoboard?',
-label: 'Product specifications and benefits',
-},
+    videoId: '2808638626181424',
+    thumbnail: '/thumbnails/Ads4.webp',
+    title: 'Bakit nga ba palaying Zenoboard?',
+    label: 'Product specifications and benefits',
+  },
 ]
-
 
 function ReelCard({ reel, index, onOpen }) {
   return (
@@ -61,8 +66,18 @@ function ReelCard({ reel, index, onOpen }) {
         className="relative rounded-2xl overflow-hidden bg-stone-800 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300"
         style={{ aspectRatio: '9/16' }}
       >
-        {/* Static thumbnail instead of iframe */}
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-700 to-stone-900" />
+        {/* Thumbnail */}
+        {reel.thumbnail && (
+          <img
+            src={reel.thumbnail}
+            alt={reel.title}
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={(e) => { e.target.style.display = 'none' }}
+          />
+        )}
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
 
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
