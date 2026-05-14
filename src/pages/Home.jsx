@@ -14,7 +14,7 @@ import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
 import { th } from 'framer-motion/client'
 
-
+{/*
 const reels = [
 {
   id: 1,
@@ -52,7 +52,7 @@ const reels = [
   //thumbnail: '/thumbnails/Ads4.webp',
 },
 ]
-
+*/}
 
 function ReelCard({ reel, index, onOpen }) {
   return (
