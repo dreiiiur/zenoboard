@@ -14,45 +14,44 @@ import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
 import { th } from 'framer-motion/client'
 
-{/*
-const reels = [
-{
-  id: 1,
-  videoId: '2069748277269677',
-  title: 'The #1 Manufacturer',
-  label: 'Zenoboard PH',
-  //thumbnail: '/thumbnails/Commercial4.webp',
- },
- {
-  id: 2,
-  videoId: '3875512342754721',
-  title: 'Cleaning with Ease',
-  label: 'Product Showcase',
-  //thumbnail: '/thumbnails/Commercial3.webp',
-  },
-  {
-  id: 3,
-  videoId: '3126484644190282',
-  title: 'Premium Laminated Plywood',
-  label: 'Product Showcase',
-  //thumbnail: '/thumbnails/Commercial2.webp',
- },
-  {
-   id: 4,
-   videoId: '1500293705037236',
-   title: 'AAA Grade Quality',
-   label: 'Quality Check',
-   //thumbnail: '/thumbnails/commercial1.webp',
-  },
-  {
-  id: 5,
-  videoId: '2808638626181424',
-  title: 'Bakit nga ba palaging Zenoboard?',
-  label: 'Product specifications and benefits',
-  //thumbnail: '/thumbnails/Ads4.webp',
-},
-]
 
+const reels = [
+  {
+    id: 1,
+    videoId: '2069748277269677',
+    title: 'The #1 Manufacturer',
+    label: 'Zenoboard PH',
+    thumbnail: '/thumbnails/Commercial4.webp',
+  },
+  {
+    id: 2,
+    videoId: '3875512342754721',
+    title: 'Cleaning with Ease',
+    label: 'Product Showcase',
+    thumbnail: '/thumbnails/Commercial3.webp',
+  },
+  {
+    id: 3,
+    videoId: '3126484644190282',
+    title: 'Premium Laminated Plywood',
+    label: 'Product Showcase',
+    thumbnail: '/thumbnails/Commercial2.webp',
+  },
+  {
+    id: 4,
+    videoId: '1500293705037236',
+    title: 'AAA Grade Quality',
+    label: 'Quality Check',
+    thumbnail: '/thumbnails/commercial1.webp',
+  },
+  {
+    id: 5,
+    videoId: '2808638626181424',
+    title: 'Bakit nga ba palaging Zenoboard?',
+    label: 'Product specifications and benefits',
+    thumbnail: '/thumbnails/Ads4.webp',
+  },
+]
 
 function ReelCard({ reel, index, onOpen }) {
   return (
@@ -68,21 +67,27 @@ function ReelCard({ reel, index, onOpen }) {
         className="relative rounded-2xl overflow-hidden bg-stone-800 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300"
         style={{ aspectRatio: '9/16' }}
       >
-        {/* Static thumbnail instead of iframe */}
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-700 to-stone-900" />
-       {/* <img
+        {/* Thumbnail */}
+        <img
           src={reel.thumbnail}
           alt={reel.title}
-          className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-        /> */}
-        {/* Play button 
+          className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+          onError={(e) => {
+            e.target.style.display = 'none'
+          }}
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
+
+        {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
             <FaFacebook className="text-white text-2xl" />
           </div>
         </div>
 
-        {/* Bottom label 
+        {/* Bottom label */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-8">
           <p className="text-white/60 text-xs mb-0.5">{reel.label}</p>
           <p className="text-white text-sm font-semibold leading-tight">{reel.title}</p>
@@ -90,7 +95,7 @@ function ReelCard({ reel, index, onOpen }) {
       </div>
     </motion.div>
   )
-}*/}
+}
 
 function ReelModal({ reel, onClose }) {
   if (!reel) return null
@@ -112,7 +117,6 @@ function ReelModal({ reel, onClose }) {
           style={{ width: '100%', maxWidth: '400px', aspectRatio: '9/16' }}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Close */}
           <button
             onClick={onClose}
             className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-primary transition-colors"
@@ -120,7 +124,6 @@ function ReelModal({ reel, onClose }) {
             <FiX />
           </button>
 
-          {/* Facebook video embed */}
           <iframe
             src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${reel.videoId}&show_text=false&autoplay=1`}
             className="w-full h-full"
