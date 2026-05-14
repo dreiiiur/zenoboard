@@ -6,25 +6,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     chunkSizeWarningLimit: 1000,
-    minify: 'esbuild',
+    minify: 'oxc', // ← changed from 'esbuild'
     rollupOptions: {
       output: {
-        // Vite 6+ requires manualChunks as a function, not an object
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react-dom') || id.includes('react-router-dom')) {
-              return 'vendor'
-            }
-            if (id.includes('framer-motion')) {
-              return 'motion'
-            }
-            if (id.includes('react-icons')) {
-              return 'icons'
-            }
-            if (id.includes('@emailjs')) {
-              return 'emailjs'
-            }
-          }
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          motion: ['framer-motion'],
+          icons: ['react-icons'],
+          emailjs: ['@emailjs/browser'],
         },
       },
     },
