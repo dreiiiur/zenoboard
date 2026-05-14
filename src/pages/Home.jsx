@@ -52,7 +52,7 @@ const reels = [
   //thumbnail: '/thumbnails/Ads4.webp',
 },
 ]
-*/}
+
 
 function ReelCard({ reel, index, onOpen }) {
   return (
@@ -75,14 +75,14 @@ function ReelCard({ reel, index, onOpen }) {
           alt={reel.title}
           className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
         /> */}
-        {/* Play button */}
+        {/* Play button 
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
             <FaFacebook className="text-white text-2xl" />
           </div>
         </div>
 
-        {/* Bottom label */}
+        {/* Bottom label 
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-8">
           <p className="text-white/60 text-xs mb-0.5">{reel.label}</p>
           <p className="text-white text-sm font-semibold leading-tight">{reel.title}</p>
@@ -90,7 +90,7 @@ function ReelCard({ reel, index, onOpen }) {
       </div>
     </motion.div>
   )
-}
+}*/}
 
 function ReelModal({ reel, onClose }) {
   if (!reel) return null
