@@ -12,38 +12,44 @@ import CTASection from '../components/CTASection'
 import BranchCard from '../components/BranchCard'
 import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
+import { th } from 'framer-motion/client'
 
 
 const reels = [
 {
-id: 1,
-   videoId: '2069748277269677',
-    title: 'The #1 Manufacturer',
-    label: 'Zenoboard PH',
+  id: 1,
+  videoId: '2069748277269677',
+  title: 'The #1 Manufacturer',
+  label: 'Zenoboard PH',
+  thumbnail: '/thumbnails/Commercial4.webp',
  },
  {
-   id: 2,
-   videoId: '3875512342754721',
-    title: 'Cleaning with Ease',
-   label: 'Product Showcase',
+  id: 2,
+  videoId: '3875512342754721',
+  title: 'Cleaning with Ease',
+  label: 'Product Showcase',
+  thumbnail: '/thumbnails/Commercial3.webp',
   },
   {
-    id: 3,
-    videoId: '3126484644190282',
-    title: 'Premium Laminated Plywood',
-   label: 'Product Showcase',
+  id: 3,
+  videoId: '3126484644190282',
+  title: 'Premium Laminated Plywood',
+  label: 'Product Showcase',
+  thumbnail: '/thumbnails/Commercial2.webp',
  },
   {
    id: 4,
-    videoId: '1500293705037236',
+   videoId: '1500293705037236',
    title: 'AAA Grade Quality',
    label: 'Quality Check',
+   thumbnail: '/thumbnails/commercial1.webp',
   },
   {
-    id: 5,
+  id: 5,
   videoId: '2808638626181424',
-   title: 'Bakit nga ba palaging Zenoboard?',
-label: 'Product specifications and benefits',
+  title: 'Bakit nga ba palaging Zenoboard?',
+  label: 'Product specifications and benefits',
+  thumbnail: '/thumbnails/Ads4.webp',
 },
 ]
 
@@ -64,7 +70,11 @@ function ReelCard({ reel, index, onOpen }) {
       >
         {/* Static thumbnail instead of iframe */}
         <div className="absolute inset-0 bg-gradient-to-b from-stone-700 to-stone-900" />
-
+        <img
+          src={reel.thumbnail || `https://graph.facebook.com/${reel.videoId}/picture?type=large`}
+          alt={reel.title}
+          className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+        />
         {/* Play button */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
