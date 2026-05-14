@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
 const galleryImages = [
-  { src: '/applications/kitchen-cabinet.png', span: 'col-span-2 row-span-2', alt: 'Modern interior' },
-  { src: '/applications/living-room.png', span: '', alt: 'Living room' },
-  { src: '/applications/wardrobe.png', span: '', alt: 'Wardrobe' },
-  { src: '/applications/tv-console.png', span: '', alt: 'TV console' },
-  { src: '/applications/office.png', span: '', alt: 'Office table' },
-  { src: '/applications/bedroom.png', span: 'col-span-2', alt: 'Bedroom' },
+  { src: '/applications/kitchen-cabinet.webp', span: 'col-span-2 row-span-2', alt: 'Modern interior' },
+  { src: '/applications/living-room.webp', span: '', alt: 'Living room' },
+  { src: '/applications/wardrobe.webp', span: '', alt: 'Wardrobe' },
+  { src: '/applications/tv-console.webp', span: '', alt: 'TV console' },
+  { src: '/applications/office.webp', span: '', alt: 'Office table' },
+  { src: '/applications/bedroom.webp', span: 'col-span-2', alt: 'Bedroom' },
 ]
 
 export default function GallerySection() {
