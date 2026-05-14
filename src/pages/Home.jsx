@@ -14,38 +14,37 @@ import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
 
 
-//const reels = [
-//  {
-//    id: 1,
-//    videoId: '2069748277269677',
-//    title: 'The #1 Manufacturer',
-//    label: 'Zenoboard PH',
-//  },
-//  {
-//    id: 2,
-//    videoId: '3875512342754721',
-//    title: 'Cleaning with Ease',
-//    label: 'Product Showcase',
-//  },
-//  {
-//    id: 3,
-//    videoId: '3126484644190282',
-//    title: 'Premium Laminated Plywood',
-//    label: 'Product Showcase',
-//  },
-//  {
-//   id: 4,
-//    videoId: '1500293705037236',
-//    title: 'AAA Grade Quality',
-//    label: 'Quality Check',
-//  },
-//  {
-//    id: 5,
-//  videoId: '2808638626181424',
-  //  title: 'Bakit nga ba palaging Zenoboard?',
-    //label: 'Product specifications and benefits',
- // },
-//]
+const reels = [
+{
+id: 1,
+   videoId: '2069748277269677',
+    title: 'The #1 Manufacturer',
+    label: 'Zenoboard PH',
+ },
+ {
+   id: 2,
+   videoId: '3875512342754721',
+    title: 'Cleaning with Ease',
+   label: 'Product Showcase',
+  },
+  {
+    id: 3,
+    title: 'Premium Laminated Plywood',
+   label: 'Product Showcase',
+ },
+  {
+   id: 4,
+    videoId: '1500293705037236',
+   title: 'AAA Grade Quality',
+   label: 'Quality Check',
+  },
+  {
+    id: 5,
+  videoId: '2808638626181424',
+   title: 'Bakit nga ba palaging Zenoboard?',
+label: 'Product specifications and benefits',
+},
+]
 
 
 function ReelCard({ reel, index, onOpen }) {
@@ -175,7 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reels Section 
+      {/* Reels Section */}
       <section className="py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-6">
@@ -236,10 +235,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reel Modal
+      {/* Reel Modal */}
       {activeReel && (
         <ReelModal reel={activeReel} onClose={() => setActiveReel(null)} />
-      )}  */}
+      )}  
 
       {/* Testimonial */}
       <Testimonial />
