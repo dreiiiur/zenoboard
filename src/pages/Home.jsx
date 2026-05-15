@@ -176,6 +176,17 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-16 align-middle justify-center">
+          <div className="flex items-center justify-center gap-6">
+            
+            <Link
+              to="/visualizer"
+            ><button className="group inline-flex items-center gap-2 px-6 py-3.5 border bg-primary text-white text-lg font-semibold rounded-full hover:border-primary hover:text-primary hover:bg-white transition-all duration-300"> <FiArrowRight className="transition-transform group-hover:translate-x-1" /> Try Our Product Visualizer</button>
+            </Link>
+          </div>
+        </div>
+
       </section>
 
       {/* Reels Section */}

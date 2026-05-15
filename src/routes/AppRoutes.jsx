@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import MainLayout from '../layouts/MainLayout'
 
-// Lazy load all pages — each page only loads when the user visits it
 const Home = lazy(() => import('../pages/Home'))
 const About = lazy(() => import('../pages/About'))
 const Products = lazy(() => import('../pages/Products'))
@@ -10,8 +9,8 @@ const ProductDetails = lazy(() => import('../pages/ProductDetails'))
 const Applications = lazy(() => import('../pages/Applications'))
 const TestimonialsPage = lazy(() => import('../pages/TestimonialsPage'))
 const Contact = lazy(() => import('../pages/Contact'))
+const Visualizer = lazy(() => import('../pages/Visualizer'))
 
-// Simple loading fallback
 function PageLoader() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">
@@ -35,6 +34,7 @@ export default function AppRoutes() {
           <Route path="/applications" element={<Applications />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/visualizer" element={<Visualizer />} />
         </Route>
       </Routes>
     </Suspense>

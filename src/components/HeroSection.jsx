@@ -5,7 +5,7 @@ import { FiArrowRight, FiPlay } from 'react-icons/fi'
 
 const slides = [
   {
-    src: '/hero6.webp',
+    src: '/hero5.webp',
     alt: 'Premium interior',
     headline: <>The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">#1 Manufacturer</span><br />in the Philippines.</>,
     sub: 'Zenoboard Philippines manufactures premium laminated marine plywood for residential and commercial projects.',
@@ -23,7 +23,7 @@ const slides = [
     sub: 'Skip the middleman. Get premium laminated marine plywood straight from our Bulacan manufacturing plant.',
   },
    {
-    src: '/hero5.webp',
+    src: '/hero6.webp',
     alt: 'Business to Business',
     headline: <>Business to Business<br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Transactions.</span></>,
     sub: 'We accomodate both B2C and B2B clients, providing tailored solutions for residential projects and commercial fit-outs alike.',
@@ -91,7 +91,7 @@ export default function HeroSection() {
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 <span className="text-primary text-xs font-semibold tracking-widest uppercase">
-                  Premium Laminated Marine Plywood
+                 Laminated Marine Plywood
                 </span>
               </motion.div>
 
