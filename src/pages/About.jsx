@@ -68,7 +68,7 @@ export default function About() {
                 As a direct manufacturer, we cut out the middlemen and deliver better value to our clients without compromising on quality. From contractors and architects to homeowners and furniture makers — we're the partner you can count on.
               </p>
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-stone-100">
-                {[['500+', 'Clients'], ['2', 'Branches'], ['★ 5.0', 'Average Rating']].map(([val, label]) => (
+                {[["500+", "Clients"], ["2", "Branches"], ["★ 5.0", "Average Rating"]].map(([val, label]) => (
                   <div key={label}>
                     <p className="text-3xl font-bold text-primary mb-1">{val}</p>
                     <p className="text-stone-500 text-sm">{label}</p>
@@ -77,58 +77,51 @@ export default function About() {
               </div>
             </motion.div>
 
+            {/* 5-image bento grid */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 grid-rows-[1fr_1fr_0.7fr] gap-3 h-[520px]"
             >
-              <img src="/products/walnut/walnut-sample1.png" alt="" className="rounded-2xl object-cover aspect-[3/4]" />
-              <div className="flex flex-col gap-4 pt-8">
-                <img src="/products/white/white-sample1.png" alt="" className="rounded-2xl object-cover aspect-square" />
-                <img src="/products/wenge/wenge-sample1.png" alt="" className="rounded-2xl object-cover aspect-square" />
-              </div>
+              {/* Left: tall hero spanning rows 1-2 */}
+              <img
+                src="/products/walnut/walnut-sample1.png"
+                alt="Walnut finish"
+                className="rounded-2xl object-cover w-full h-full row-span-2"
+              />
+              {/* Right top */}
+              <img
+                src="/products/white/white-sample1.png"
+                alt="White finish"
+                className="rounded-2xl object-cover w-full h-full"
+              />
+              {/* Right middle */}
+              <img
+                src="/products/wenge/wenge-sample1.png"
+                alt="Wenge finish"
+                className="rounded-2xl object-cover w-full h-full"
+              />
+              {/* Bottom row: two equal images */}
+              <img
+                src="/products/straight-oak/so-sample2.png"
+                alt="Straight Oak finish"
+                className="rounded-2xl object-cover w-full h-full"
+              />
+              <img
+                src="/hero5.webp"
+                alt="Gray finish"
+                className="rounded-2xl object-cover w-full h-full"
+              />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Timeline 
+      {/* Timeline
       <section className="py-28 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <SectionHeader
-            badge="Our Journey"
-            title="15 Years of Growth"
-            subtitle="From a single facility to a trusted nationwide brand."
-          />
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-stone-200 hidden sm:block" />
-            <div className="space-y-10">
-              {milestones.map((m, i) => (
-                <motion.div
-                  key={m.year}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="sm:pl-20 relative"
-                >
-                  <div className="hidden sm:flex absolute left-0 top-2 w-16 h-16 rounded-full bg-white border-2 border-primary/30 items-center justify-center shadow-sm">
-                    <span className="text-primary text-xs font-bold">{m.year}</span>
-                  </div>
-                  <div className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="sm:hidden text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">{m.year}</span>
-                      <h3 className="font-bold text-stone-800">{m.title}</h3>
-                    </div>
-                    <p className="text-stone-500 text-sm leading-relaxed">{m.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
+        ...
       </section> */}
 
       {/* Why Choose Us */}

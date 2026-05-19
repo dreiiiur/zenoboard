@@ -15,7 +15,7 @@ export const products = [
       width: '4 ft (1220 mm)',
       length: '8 ft (2440 mm)',
     },
-    thicknesses: ['18mm'],
+    thicknesses: ['12mm', '15mm', '18mm'],
     selectedThickness: '18mm',
     specs: {
       width: '1220 mm (4 ft)',
@@ -51,7 +51,7 @@ export const products = [
       width: '4 ft (1220 mm)',
       length: '8 ft (2440 mm)',
     },
-    thicknesses: ['18mm'],
+    thicknesses: ['12mm', '15mm', '18mm'],
     selectedThickness: '18mm',
     specs: {
       width: '1220 mm (4 ft)',
@@ -89,7 +89,7 @@ export const products = [
       width: '4 ft (1220 mm)',
       length: '8 ft (2440 mm)',
     },
-    thicknesses: ['18mm'],
+    thicknesses: ['12mm','15mm', '18mm'],
     selectedThickness: '18mm',
     specs: {
       width: '1220 mm (4 ft)',
@@ -125,7 +125,7 @@ export const products = [
       width: '4 ft (1220 mm)',
       length: '8 ft (2440 mm)',
     },
-    thicknesses: ['18mm'],
+    thicknesses: ['12mm','15mm', '18mm'],
     selectedThickness: '18mm',
     specs: {
       width: '1220 mm (4 ft)',
@@ -163,7 +163,7 @@ export const products = [
       width: '4 ft (1220 mm)',
       length: '8 ft (2440 mm)',
     },
-    thicknesses: ['18mm'],
+    thicknesses: ['12mm','15mm', '18mm'],
     selectedThickness: '18mm',
     specs: {
       width: '1220 mm (4 ft)',
