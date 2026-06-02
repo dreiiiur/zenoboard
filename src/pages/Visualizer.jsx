@@ -208,7 +208,7 @@ function KitchenCabinetSVG({ textures, parts }) {
           fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1" />
       ))}
       {/* Handles */}
-      {[81, 201, 321].map(x => (
+      {[126, 246, 367].map(x => (
         <g key={x}>
           <rect x={x-13} y="93" width="26" height="9" rx="4.5" fill="rgba(0,0,0,0.2)" />
           <rect x={x-13} y="92" width="26" height="9" rx="4.5" fill={g('accent', '#C0B8B0')} />
@@ -245,7 +245,7 @@ function KitchenCabinetSVG({ textures, parts }) {
           fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1" />
       ))}
       {/* Handles */}
-      {[81, 201, 321].map(x => (
+      {[126, 246, 367].map(x => (
         <g key={x}>
           <rect x={x-13} y="295" width="26" height="9" rx="4.5" fill="rgba(0,0,0,0.2)" />
           <rect x={x-13} y="294" width="26" height="9" rx="4.5" fill={g('accent', '#C0B8B0')} />
