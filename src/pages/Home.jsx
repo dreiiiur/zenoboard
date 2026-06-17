@@ -13,6 +13,7 @@ import BranchCard from '../components/BranchCard'
 import SectionHeader from '../components/SectionHeader'
 import { products, applications, branches, features } from '../data/products'
 import { th } from 'framer-motion/client'
+import { FiMapPin } from 'react-icons/fi'
 
 
 const reels = [
@@ -309,20 +310,20 @@ export default function Home() {
       <GallerySection />
 
       {/* Branches */}
-      <section className="py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionHeader
-            badge="Our Locations"
-            title="Visit a Branch Near You"
-            subtitle="Two conveniently located branches serving clients across Luzon."
-          />
-          <div className="grid md:grid-cols-2 gap-8">
-            {branches.map((branch, i) => (
-              <BranchCard key={branch.id} branch={branch} index={i} />
-            ))}
-          </div>
-        </div>
-      </section>
+     <section className="py-28 bg-white">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <SectionHeader
+      badge="Our Locations"
+      title="Visit a Branch Near You"
+      subtitle="Two conveniently located branches serving clients across Luzon."
+    />
+    <div className="grid md:grid-cols-2 gap-8">
+      {branches.map((branch, i) => (
+        <BranchCard key={branch.id} branch={branch} index={i} />
+      ))}
+    </div>
+  </div>
+</section>
 
       <CTASection />
     </>

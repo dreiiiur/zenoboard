@@ -242,7 +242,7 @@ export const branches = [
     phone: '09926519341',
     email: 'zenoboardphilippines@gmail.com',
     hours: 'Mon–Sat: 8:00 AM – 5:00 PM',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864!2d121.175!3d14.625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM3JzMwLjAiTiAxMjHCsDEwJzMwLjAiRQ!5e0!3m2!1sen!2sph!4v1234567890',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5657291525654!2d121.1508714!3d14.623797399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9004b6ed6b7%3A0x5340a17591ba1c44!2sVernum%20warehouse!5e0!3m2!1sen!2sph!4v1781675634249!5m2!1sen!2sph',
   },
 ];
 
