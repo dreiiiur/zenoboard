@@ -51,7 +51,7 @@ export default function ProductCard({ product, index = 0 }) {
 
           {/* Dimensions */}
           <div className="flex flex-wrap gap-2 mb-5">
-            {['4ft × 8ft', '9–25mm'].map((dim) => (
+            {['4ft × 8ft', '12mm', '15mm', '18mm'].map((dim) => (
               <span key={dim} className="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-medium rounded-full">
                 {dim}
               </span>

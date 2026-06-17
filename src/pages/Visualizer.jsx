@@ -179,8 +179,21 @@ const furniture = [
   },
 ]
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Kitchen Cabinet SVG
+// Handles moved to the RIGHT side of each door panel.
+//
+// Door layout (viewBox width = 400):
+//   Door 1: x=23,  width=115  → right edge at 138  → handle left edge at 108 (26px wide, 4px margin)
+//   Door 2: x=144, width=115  → right edge at 259  → handle left edge at 229
+//   Door 3: x=264, width=115  → right edge at 379  → handle left edge at 349
+// ─────────────────────────────────────────────────────────────────────────────
 function KitchenCabinetSVG({ textures, parts }) {
   const g = (id, fb) => getFill(id, textures, fb)
+
+  // Right-aligned handle x positions for each of the 3 doors
+  const handleX = [108, 229, 349]
+
   return (
     <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-2xl">
       <PartDefs parts={parts} textures={textures} />
@@ -207,11 +220,11 @@ function KitchenCabinetSVG({ textures, parts }) {
         <rect key={x} x={x} y="37" width="115" height="116" rx="2"
           fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1" />
       ))}
-      {/* Handles */}
-      {[126, 246, 367].map(x => (
+      {/* Upper handles — RIGHT side of each door */}
+      {handleX.map(x => (
         <g key={x}>
-          <rect x={x-13} y="93" width="26" height="9" rx="4.5" fill="rgba(0,0,0,0.2)" />
-          <rect x={x-13} y="92" width="26" height="9" rx="4.5" fill={g('accent', '#C0B8B0')} />
+          <rect x={x} y="93" width="26" height="9" rx="4.5" fill="rgba(0,0,0,0.2)" />
+          <rect x={x} y="92" width="26" height="9" rx="4.5" fill={g('accent', '#C0B8B0')} />
         </g>
       ))}
 
@@ -244,11 +257,11 @@ function KitchenCabinetSVG({ textures, parts }) {
         <rect key={x} x={x} y="235" width="115" height="132" rx="2"
           fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1" />
       ))}
-      {/* Handles */}
-      {[126, 246, 367].map(x => (
+      {/* Lower handles — RIGHT side of each door */}
+      {handleX.map(x => (
         <g key={x}>
-          <rect x={x-13} y="295" width="26" height="9" rx="4.5" fill="rgba(0,0,0,0.2)" />
-          <rect x={x-13} y="294" width="26" height="9" rx="4.5" fill={g('accent', '#C0B8B0')} />
+          <rect x={x} y="295" width="26" height="9" rx="4.5" fill="rgba(0,0,0,0.2)" />
+          <rect x={x} y="294" width="26" height="9" rx="4.5" fill={g('accent', '#C0B8B0')} />
         </g>
       ))}
 
@@ -535,7 +548,6 @@ function ConferenceTableSVG({ textures, parts }) {
     </svg>
   )
 }
-
 
 const svgMap = {
   cabinet:    KitchenCabinetSVG,
