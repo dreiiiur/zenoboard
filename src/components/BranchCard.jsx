@@ -82,7 +82,7 @@ export default function BranchCard({ branch, index = 0 }) {
           className="flex items-center justify-center gap-2 bg-stone-700 hover:bg-stone-900 text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
         >
           <FiMapPin />
-          <span>{branch.city} Banch</span>
+          <span>{branch.city} Branch</span>
         </a>
       </div>
     </motion.div>
