@@ -238,7 +238,7 @@ export const branches = [
     id: 'antipolo',
     city: 'Antipolo',
     province: 'Rizal',
-    address: 'Masagana Zone 4A, Baranggay Mayamot, Antipolo City, Rizal 1870',
+    address: '102 Marikina-Infanta Highway, Cupang, Antipolo, Rizal, 1870 Philippines',
     phone: '09926519341',
     email: 'zenoboardphilippines@gmail.com',
     hours: 'Mon–Sat: 8:00 AM – 5:00 PM',
