@@ -111,13 +111,13 @@ export const products = [
   },
   {
     id: 'white',
-    name: 'White',
+    name: 'Premium White',
     category: 'Laminated Marine Plywood',
-    finish: 'White',
+    finish: 'Premium White',
     tagline: 'Clean, minimal, and endlessly versatile',
     shortDescription: 'A crisp, high-gloss or matte white finish that brightens any space. The foundation of modern Scandinavian and minimalist interiors.',
     fullDescription:
-      'The White finish is a staple for modern interior designers who value clean, airy aesthetics. Whether used as a backdrop for bold accents or as the primary material for an all-white minimalist concept, this finish delivers consistent, flawless results with every sheet.',
+      'The Premium White finish is a staple for modern interior designers who value clean, airy aesthetics. Whether used as a backdrop for bold accents or as the primary material for an all-white minimalist concept, this finish delivers consistent, flawless results with every sheet.',
     price: 'Contact for pricing',
     rating: 4.7,
     reviewCount: 89,
