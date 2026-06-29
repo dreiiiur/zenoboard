@@ -4,11 +4,15 @@ import { FiRefreshCw, FiCheck, FiArrowLeft } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 const finishes = [
-  { id: 'white',        name: 'White',        label: 'Matte finish',    stroke: '#C8C6C2', image: '/patterns/white-finish.webp',       imageH: '/tabletop/white-tabletop.webp' },
+  { id: 'white',        name: 'Premium White',        label: 'Matte finish',    stroke: '#C8C6C2', image: '/patterns/white-finish.webp',       imageH: '/tabletop/white-tabletop.webp' },
   { id: 'gray',         name: 'Gray',         label: 'Concrete finish', stroke: '#7A7A7A', image: '/patterns/gray-finish.webp',        imageH: '/tabletop/gray-tabletop.webp' },
   { id: 'straight-oak', name: 'Straight Oak', label: 'Natural grain',   stroke: '#9A6A40', image: '/patterns/straightoak-finish.webp', imageH: '/tabletop/oak-tabletop.webp' },
   { id: 'walnut',       name: 'Walnut',       label: 'Wave grain',      stroke: '#4A2810', image: '/patterns/walnut-finish.webp',      imageH: '/tabletop/walnut-tabletop.webp' },
   { id: 'wenge',        name: 'Wenge',        label: 'Fine grain',      stroke: '#1E0E06', image: '/patterns/wenge-finish.webp',       imageH: '/tabletop/wenge-tabletop.webp' },
+  { id: 'woven-gray',   name: 'Woven Gray',   label: 'Modern look',     stroke: '#808080', image: '/patterns/wovengray-finish.png',   imageH: '/tabletop/wovengray-tabletop.png' },
+  {id:  'mahogany',     name: 'Mahogany',     label: 'Modern look',     stroke: '#6A4B3C', image: '/patterns/mahogany-finish.png',  imageH: '/tabletop/mahogany-tabletop.png' },
+  {id:  'birch',        name: 'Birch',        label: 'Modern look',     stroke: '#A63A2B', image: '/patterns/birch-finish.png',         imageH: '/tabletop/birch-tabletop.png' },
+  {id:  'royal-walnut',        name: 'Royal Walnut',        label: 'Modern look',     stroke: '#D9A066', image: '/patterns/royalwalnut-finish.png',         imageH: '/tabletop/royalwalnut-tabletop.png' },
 ]
 
 function makePatternDef(uid, image) {
