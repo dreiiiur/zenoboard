@@ -5,9 +5,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Black Walnut',
     tagline: 'Deep, dramatic grain with timeless elegance',
-    shortDescription: 'A rich, deep-toned finish inspired by authentic walnut wood. Perfect for premium cabinetry and upscale interiors.',
+    shortDescription: 'A luxurious dark walnut finish that delivers timeless elegance with marine-grade durability.',
     fullDescription:
-      'The Black Walnut finish offers a sophisticated dark wood aesthetic that transforms any space into a luxury environment. Engineered with Grade Triple A marine plywood core, this finish maintains its depth and character even in high-moisture environments. Ideal for designers and contractors looking to deliver premium results.',
+      'Black Walnut features rich, deep wood tones that bring sophistication to cabinetry, furniture, and interior spaces. Built on Zenoboards premium marine laminated plywood, it combines refined aesthetics with superior moisture resistance, structural strength, and long-lasting performance for residential and commercial projects.',
     price: 'Contact for pricing',
     rating: 4.9,
     reviewCount: 48,
@@ -42,9 +42,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Straight Oak',
     tagline: 'Classic oak grain with modern refinement',
-    shortDescription: 'A warm, natural oak finish with clean linear grain patterns. The perfect balance between modern and classic.',
+    shortDescription: 'A clean, natural oak finish that offers warmth, versatility, and dependable performance.',
     fullDescription:
-      'Straight Oak captures the timeless beauty of natural oak with consistent, linear grain patterns that add warmth and character to any space. Built on our Grade Triple A marine plywood core, this finish is engineered for longevity and dimensional stability.',
+      'Straight Oak showcases a subtle woodgrain that complements both modern and classic interiors. Designed for cabinets, wardrobes, furniture, and wall panels, it is manufactured with a high-quality marine plywood core to provide excellent durability, dimensional stability, and everyday reliability.',
     price: 'Contact for pricing',
     rating: 4.8,
     reviewCount: 62,
@@ -81,9 +81,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Wenge',
     tagline: 'Bold African hardwood aesthetic',
-    shortDescription: 'Inspired by the rare African wenge tree, this finish delivers dramatic dark tones with coarse, open grain patterns.',
+    shortDescription: 'A rich woodgrain finish that blends modern luxury with exceptional strength.',
     fullDescription:
-      'The Wenge finish replicates the distinctive look of African wenge hardwood — one of the most sought-after exotic woods in premium furniture design. Dark chocolate tones with lighter grain streaks create a visually striking surface that commands attention in any interior setting.',
+      'Wenge offers a bold, elegant appearance with its dark wood texture, making it ideal for premium residential and commercial interiors. Engineered with Zenoboards marine laminated plywood technology, it delivers superior strength, moisture resistance, and lasting structural performance.',
     price: 'Contact for pricing',
     rating: 4.9,
     reviewCount: 35,
@@ -118,9 +118,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Premium White',
     tagline: 'Clean, minimal, and endlessly versatile',
-    shortDescription: 'A crisp, high-gloss or matte white finish that brightens any space. The foundation of modern Scandinavian and minimalist interiors.',
+    shortDescription: 'A clean white finish designed for bright, modern spaces with lasting durability.',
     fullDescription:
-      'The Premium White finish is a staple for modern interior designers who value clean, airy aesthetics. Whether used as a backdrop for bold accents or as the primary material for an all-white minimalist concept, this finish delivers consistent, flawless results with every sheet.',
+      'Premium White provides a smooth, contemporary appearance that enhances kitchens, wardrobes, offices, and minimalist interiors. Manufactured with a premium marine plywood core, it offers excellent resistance to moisture, reliable strength, and a finish that stays beautiful over time.',
     price: 'Contact for pricing',
     rating: 4.7,
     reviewCount: 89,
@@ -155,11 +155,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Gray',
     tagline: 'Sleek, contemporary look',
-    shortDescription: 'A sophisticated gray finish that adds a modern touch to any space. Perfect for creating a calm, cohesive atmosphere.',
+    shortDescription: 'A sophisticated gray wood finish that complements todays modern interiors.',
     fullDescription:
-      'The Gray finish offers a sleek, contemporary aesthetic that complements a wide range of interior design styles. Its neutral tone provides a versatile backdrop that can be easily paired with other colors and textures to create a harmonious environment.',
-    fullDescription:
-      'The Wenge finish replicates the distinctive look of African wenge hardwood — one of the most sought-after exotic woods in premium furniture design. Dark chocolate tones with lighter grain streaks create a visually striking surface that commands attention in any interior setting.',
+      'Gray delivers a contemporary aesthetic with subtle wood textures that suit residential and commercial applications. Backed by Zenoboards marine laminated plywood construction, it combines stylish design with dependable strength, moisture resistance, and long-term durability.',
     price: 'Contact for pricing',
     rating: 4.9,
     reviewCount: 35,
@@ -194,11 +192,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Mahogany',
     tagline: 'Warm, rich tones',
-    shortDescription: 'A warm, rich finish that brings a sense of luxury and warmth to any space. Ideal for creating a sophisticated, inviting atmosphere.',
+    shortDescription: 'A timeless mahogany finish that combines classic beauty with modern performance.',
     fullDescription:
-      'The Mahogany finish offers a warm, rich aesthetic that complements a wide range of interior design styles. Its luxurious tone provides a sophisticated backdrop that can be easily paired with other colors and textures to create a harmonious environment.',
-    fullDescription:
-      'The Mahogany finish replicates the distinctive look of African mahogany hardwood — one of the most sought-after exotic woods in premium furniture design. Rich, warm tones with subtle grain patterns create a visually striking surface that commands attention in any interior setting.',
+      'Mahogany features warm reddish-brown tones that create an elegant and inviting atmosphere. Ideal for furniture, cabinetry, and interior accents, it is built with Zenoboards durable marine plywood core to provide exceptional strength, moisture protection, and lasting reliability.',
     price: 'Contact for pricing',
     rating: 4.9,
     reviewCount: 35,
@@ -231,12 +227,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Royal Walnut',
     tagline: 'Warm, rich tones',
-    shortDescription: 'A warm, rich finish that brings a sense of luxury and warmth to any space. Ideal for creating a sophisticated, inviting atmosphere.',
+    shortDescription: 'A premium walnut finish that delivers warmth, elegance, and superior durability.',
     fullDescription:
-      'The Royal Walnut finish offers a warm, rich aesthetic that complements a wide range of interior design styles. Its luxurious tone provides a sophisticated backdrop that can be easily paired with other colors and textures to create a harmonious environment.',
-    fullDescription:
-      'The Royal Walnut finish replicates the distinctive look of African walnut hardwood — one of the most sought-after exotic woods in premium furniture design. Rich, warm tones with subtle grain patterns create a visually striking surface that commands attention in any interior setting.',
-    price: 'Contact for pricing',
+      'Royal Walnut showcases a refined woodgrain with rich natural tones, making it perfect for luxury interiors, furniture, and feature walls. Its premium marine laminated plywood construction ensures outstanding structural integrity, moisture resistance, and dependable performance.',
     rating: 4.9,
     reviewCount: 35,
     dimensions: {
@@ -268,11 +261,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Woven Gray',
     tagline: 'Modern, sophisticated look',
-    shortDescription: 'A modern finish that adds a touch of sophistication to any space. Perfect for creating a contemporary, stylish atmosphere.',
+    shortDescription: 'A textured gray finish that brings modern character to contemporary interiors.',
     fullDescription:
-      'The Woven Gray finish offers a modern, sophisticated aesthetic that complements a wide range of interior design styles. Its sleek appearance provides a contemporary backdrop that can be easily paired with other colors and textures to create a harmonious environment.',
-    fullDescription:
-      'The Woven Gray finish replicates the distinctive look of woven gray materials — one of the most sought-after textures in premium furniture design. Subtle patterns with a modern feel create a visually striking surface that commands attention in any interior setting.',
+      'Woven Gray features a distinctive woven wood pattern that adds depth and sophistication to cabinets, wall panels, and custom furniture. Manufactured with Zenoboards marine laminated plywood technology, it offers exceptional strength, moisture resistance, and long-lasting quality.',
     price: 'Contact for pricing',
     rating: 4.9,
     reviewCount: 35,
@@ -305,11 +296,9 @@ export const products = [
     category: 'Laminated Marine Plywood',
     finish: 'Birch',
     tagline: 'Natural, warm look',
-    shortDescription: 'A natural finish that brings warmth and character to any space. Perfect for creating a cozy, inviting atmosphere.',
+    shortDescription: 'A light natural wood finish that creates bright and timeless interior spaces.',
     fullDescription:
-      'The Birch finish offers a natural, warm aesthetic that complements a wide range of interior design styles. Its organic appearance provides a welcoming backdrop that can be easily paired with other colors and textures to create a harmonious environment.',
-    fullDescription:
-      'The Birch finish replicates the distinctive look of birch wood — one of the most sought-after natural materials in premium furniture design. Subtle grain patterns with a modern feel create a visually striking surface that commands attention in any interior setting.',
+      'Birch showcases a clean, natural wood appearance that perfectly suits Scandinavian, minimalist, and contemporary designs. Built with Zenoboards premium marine laminated plywood construction, it delivers outstanding durability, moisture resistance, and reliable performance for residential and commercial applications.',
     price: 'Contact for pricing',
     rating: 4.9,
     reviewCount: 35,
