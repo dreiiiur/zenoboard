@@ -221,7 +221,7 @@ export const products = [
     images: [
       '/products/mahogany/mahogany-finish.png',
     ],
-    color: '#808080',
+    color: '#943110',
     applications: ['Executive Offices', 'Hotel Lobbies', 'Premium Residences', 'Commercial Furniture'],
     tags: ['Exotic', 'Bold', 'Luxury'],
   },
@@ -258,7 +258,7 @@ export const products = [
     images: [
       '/patterns/royalwalnut-finish.png',
     ],
-    color: '#808080',
+    color: '#6c3e2c',
     applications: ['Executive Offices', 'Hotel Lobbies', 'Premium Residences', 'Commercial Furniture'],
     tags: ['Exotic', 'Bold', 'Luxury'],
   },
@@ -295,7 +295,7 @@ export const products = [
     images: [
       '/patterns/wovengray-finish.png',
     ],
-    color: '#808080',
+    color: '#504e4f',
     applications: ['Executive Offices', 'Hotel Lobbies', 'Premium Residences', 'Commercial Furniture'],
     tags: ['Exotic', 'Bold', 'Luxury'],
   },
@@ -332,7 +332,7 @@ export const products = [
     images: [
       '/patterns/birch-finish.png',
     ],
-    color: '#808080',
+    color: '#eed5b1',
     applications: ['Executive Offices', 'Hotel Lobbies', 'Premium Residences', 'Commercial Furniture'],
     tags: ['Exotic', 'Bold', 'Luxury'],
   },
